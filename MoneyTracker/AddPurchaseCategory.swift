@@ -13,6 +13,9 @@ struct AddPurchaseCategory: View {
     @State private var description = ""
     @ObservedObject var purchaseCategories: PurchaseCategories
     
+    // Whether we are showing the add activity view or not
+    @Binding var addingCategory: Bool
+    
     var body: some View {
         NavigationView {
             Form {
@@ -50,6 +53,9 @@ struct AddPurchaseCategory: View {
         // add the new category to the list of categories
         purchaseCategories.defined.append(PurchaseCategory(title: title, description: description))
         print(purchaseCategories.defined)
+        
+        // dismiss the add category view
+        addingCategory = false
     }
     
 }

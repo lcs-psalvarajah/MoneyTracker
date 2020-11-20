@@ -39,7 +39,8 @@ struct ContentView: View {
                 }
             }
             .sheet(isPresented: $addingCategory) {
-                AddPurchaseCategory(purchaseCategories: purchaseCategories)
+                AddPurchaseCategory(purchaseCategories: purchaseCategories,
+                                    addingCategory: $addingCategory)
             }
         }
     }
