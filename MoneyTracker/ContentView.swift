@@ -12,6 +12,9 @@ struct ContentView: View {
     // Propert to track purchase categories
     @StateObject private var purchaseCategories = PurchaseCategories()
     
+    // Whether we are showing the add activity view or not
+    @State private var addingCategory = false
+    
     
     //Body property defines the user interface
     var body: some View {
@@ -29,10 +32,14 @@ struct ContentView: View {
                     
                     Button(action: {
                         print("Here's where we would add a category")
+                        addingCategory = true
                     }, label: {
                         Image(systemName: "plus")
                     })
                 }
+            }
+            .sheet(isPresented: $addingCategory) {
+                AddPurchaseCategory(purchaseCategories: purchaseCategories)
             }
         }
     }

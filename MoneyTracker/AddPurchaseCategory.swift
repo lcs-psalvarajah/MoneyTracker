@@ -11,6 +11,7 @@ struct AddPurchaseCategory: View {
     
     @State private var title = ""
     @State private var description = ""
+    @ObservedObject var purchaseCategories: PurchaseCategories
     
     var body: some View {
         NavigationView {
@@ -34,6 +35,7 @@ struct AddPurchaseCategory: View {
                     
                     Button(action: {
                         print("Here is where a category gets created")
+                        saveCategory()
                     }, label: {
                         Text("Save")
                     })
@@ -43,11 +45,18 @@ struct AddPurchaseCategory: View {
 
         }
     }
-}
-
-
-struct AddPurchaseCategory_Previews: PreviewProvider {
-    static var previews: some View {
-        AddPurchaseCategory()
+    
+    func saveCategory() {
+        // add the new category to the list of categories
+        purchaseCategories.defined.append(PurchaseCategory(title: title, description: description))
+        print(purchaseCategories.defined)
     }
+    
 }
+
+
+//struct AddPurchaseCategory_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AddPurchaseCategory()
+//    }
+//}
