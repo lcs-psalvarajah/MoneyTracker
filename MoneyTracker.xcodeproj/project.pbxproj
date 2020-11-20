@@ -14,6 +14,7 @@
 		C8DF9F842568226500F5B073 /* TransportationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DF9F832568226500F5B073 /* TransportationView.swift */; };
 		C8DF9F892568269500F5B073 /* PurchaseCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DF9F882568269500F5B073 /* PurchaseCategory.swift */; };
 		C8DF9F8D2568282C00F5B073 /* PurchaseCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DF9F8C2568282C00F5B073 /* PurchaseCategories.swift */; };
+		C8DF9F9425682F9800F5B073 /* AddPurchaseCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DF9F9325682F9800F5B073 /* AddPurchaseCategory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		C8DF9F832568226500F5B073 /* TransportationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationView.swift; sourceTree = "<group>"; };
 		C8DF9F882568269500F5B073 /* PurchaseCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCategory.swift; sourceTree = "<group>"; };
 		C8DF9F8C2568282C00F5B073 /* PurchaseCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCategories.swift; sourceTree = "<group>"; };
+		C8DF9F9325682F9800F5B073 /* AddPurchaseCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPurchaseCategory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				C841D26D2559AEA200F8B67A /* MoneyTrackerApp.swift */,
 				C841D26F2559AEA200F8B67A /* ContentView.swift */,
+				C8DF9F9325682F9800F5B073 /* AddPurchaseCategory.swift */,
 				C8DF9F832568226500F5B073 /* TransportationView.swift */,
 				C841D2712559AEA800F8B67A /* Assets.xcassets */,
 				C841D2762559AEA800F8B67A /* Info.plist */,
@@ -149,6 +152,7 @@
 			files = (
 				C841D2702559AEA200F8B67A /* ContentView.swift in Sources */,
 				C8DF9F8D2568282C00F5B073 /* PurchaseCategories.swift in Sources */,
+				C8DF9F9425682F9800F5B073 /* AddPurchaseCategory.swift in Sources */,
 				C8DF9F892568269500F5B073 /* PurchaseCategory.swift in Sources */,
 				C8DF9F842568226500F5B073 /* TransportationView.swift in Sources */,
 				C841D26E2559AEA200F8B67A /* MoneyTrackerApp.swift in Sources */,
