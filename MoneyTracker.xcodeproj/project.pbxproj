@@ -11,6 +11,8 @@
 		C841D2702559AEA200F8B67A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C841D26F2559AEA200F8B67A /* ContentView.swift */; };
 		C841D2722559AEA800F8B67A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C841D2712559AEA800F8B67A /* Assets.xcassets */; };
 		C841D2752559AEA800F8B67A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C841D2742559AEA800F8B67A /* Preview Assets.xcassets */; };
+		C8DF9F842568226500F5B073 /* TransportationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DF9F832568226500F5B073 /* TransportationView.swift */; };
+		C8DF9F892568269500F5B073 /* PurchaseCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DF9F882568269500F5B073 /* PurchaseCategory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		C841D2712559AEA800F8B67A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C841D2742559AEA800F8B67A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C841D2762559AEA800F8B67A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8DF9F832568226500F5B073 /* TransportationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationView.swift; sourceTree = "<group>"; };
+		C8DF9F882568269500F5B073 /* PurchaseCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCategory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			children = (
 				C841D26D2559AEA200F8B67A /* MoneyTrackerApp.swift */,
 				C841D26F2559AEA200F8B67A /* ContentView.swift */,
+				C8DF9F882568269500F5B073 /* PurchaseCategory.swift */,
+				C8DF9F832568226500F5B073 /* TransportationView.swift */,
 				C841D2712559AEA800F8B67A /* Assets.xcassets */,
 				C841D2762559AEA800F8B67A /* Info.plist */,
 				C841D2732559AEA800F8B67A /* Preview Content */,
@@ -139,6 +145,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C841D2702559AEA200F8B67A /* ContentView.swift in Sources */,
+				C8DF9F892568269500F5B073 /* PurchaseCategory.swift in Sources */,
+				C8DF9F842568226500F5B073 /* TransportationView.swift in Sources */,
 				C841D26E2559AEA200F8B67A /* MoneyTrackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
