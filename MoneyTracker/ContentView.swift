@@ -23,15 +23,17 @@ struct ContentView: View {
                 Text(category.title)
                 
             }
-            .onAppear() {
-                
-                //place some example data in the list of categories
-                purchaseCategories.defined.append(PurchaseCategory(title: "Transportation", description: "When you go places use this."))
-                
-                purchaseCategories.defined.append(PurchaseCategory(title: "Recreation", description: "When doing things for fun."))
+            .navigationTitle("Money Tracker")
+            .toolbar {
+                ToolbarItem(placement: ToolbarItemPlacement.primaryAction) {
+                    
+                    Button(action: {
+                        print("Here's where we would add a category")
+                    }, label: {
+                        Image(systemName: "plus")
+                    })
+                }
             }
-            
-            
         }
     }
     
