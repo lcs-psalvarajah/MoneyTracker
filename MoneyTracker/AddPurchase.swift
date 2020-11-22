@@ -11,9 +11,12 @@ struct AddPurchase: View {
   
     @State private var amount = ""
     @State private var description = ""
-    
-    //ask if crrecg
     @State private var date = Date()
+    
+    @ObservedObject var purchases: Purchases
+    
+    // Whether we are showing the add activity view or not
+    @Binding var addingPurchase: Bool
     
     
     var body: some View {
@@ -40,7 +43,7 @@ struct AddPurchase: View {
                     
                     Button(action: {
                         print("Here is where the transaction is recorded")
-                        saveCategory()
+                        savePurchase()
                     }, label: {
                         Text("Save")
                     })
@@ -51,10 +54,19 @@ struct AddPurchase: View {
         
         
     }
-}
-
-struct AddPurchase_Previews: PreviewProvider {
-    static var previews: some View {
-        AddPurchase()
+  
+    func savePurchase() {
+        // add the new category to the list of categories
+        purchases.defined.append(Purchase(amount: amount, description: description, date: date))
+        print(purchases.defined)
+        
+        // dismiss the add category view
+        addingPurchase = false
     }
 }
+
+//struct AddPurchase_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AddPurchase()
+//    }
+//}

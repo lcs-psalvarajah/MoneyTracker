@@ -8,7 +8,9 @@
 import Foundation
 
 struct Purchase {
-    var amount: Double
+    // ask if amount should be a string or a double?
+    var amount: String
+    
     var description: String
     var date: Date
 }
