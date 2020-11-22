@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C80936FE256AF859004DF8E5 /* Purchases.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80936FD256AF859004DF8E5 /* Purchases.swift */; };
 		C841D26E2559AEA200F8B67A /* MoneyTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C841D26D2559AEA200F8B67A /* MoneyTrackerApp.swift */; };
 		C841D2702559AEA200F8B67A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C841D26F2559AEA200F8B67A /* ContentView.swift */; };
 		C841D2722559AEA800F8B67A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C841D2712559AEA800F8B67A /* Assets.xcassets */; };
@@ -14,9 +15,12 @@
 		C8DF9F892568269500F5B073 /* PurchaseCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DF9F882568269500F5B073 /* PurchaseCategory.swift */; };
 		C8DF9F8D2568282C00F5B073 /* PurchaseCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DF9F8C2568282C00F5B073 /* PurchaseCategories.swift */; };
 		C8DF9F9425682F9800F5B073 /* AddPurchaseCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DF9F9325682F9800F5B073 /* AddPurchaseCategory.swift */; };
+		C8DF9F98256844E700F5B073 /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DF9F97256844E700F5B073 /* Purchase.swift */; };
+		C8DF9F9B2568469A00F5B073 /* AddPurchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DF9F9A2568469A00F5B073 /* AddPurchase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C80936FD256AF859004DF8E5 /* Purchases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purchases.swift; sourceTree = "<group>"; };
 		C841D26A2559AEA200F8B67A /* MoneyTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C841D26D2559AEA200F8B67A /* MoneyTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyTrackerApp.swift; sourceTree = "<group>"; };
 		C841D26F2559AEA200F8B67A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,6 +30,8 @@
 		C8DF9F882568269500F5B073 /* PurchaseCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCategory.swift; sourceTree = "<group>"; };
 		C8DF9F8C2568282C00F5B073 /* PurchaseCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCategories.swift; sourceTree = "<group>"; };
 		C8DF9F9325682F9800F5B073 /* AddPurchaseCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPurchaseCategory.swift; sourceTree = "<group>"; };
+		C8DF9F97256844E700F5B073 /* Purchase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
+		C8DF9F9A2568469A00F5B073 /* AddPurchase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPurchase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,11 +67,14 @@
 				C841D26D2559AEA200F8B67A /* MoneyTrackerApp.swift */,
 				C841D26F2559AEA200F8B67A /* ContentView.swift */,
 				C8DF9F9325682F9800F5B073 /* AddPurchaseCategory.swift */,
+				C8DF9F9A2568469A00F5B073 /* AddPurchase.swift */,
 				C841D2712559AEA800F8B67A /* Assets.xcassets */,
 				C841D2762559AEA800F8B67A /* Info.plist */,
 				C841D2732559AEA800F8B67A /* Preview Content */,
 				C8DF9F882568269500F5B073 /* PurchaseCategory.swift */,
 				C8DF9F8C2568282C00F5B073 /* PurchaseCategories.swift */,
+				C8DF9F97256844E700F5B073 /* Purchase.swift */,
+				C80936FD256AF859004DF8E5 /* Purchases.swift */,
 			);
 			path = MoneyTracker;
 			sourceTree = "<group>";
@@ -147,8 +156,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C80936FE256AF859004DF8E5 /* Purchases.swift in Sources */,
+				C8DF9F9B2568469A00F5B073 /* AddPurchase.swift in Sources */,
 				C841D2702559AEA200F8B67A /* ContentView.swift in Sources */,
 				C8DF9F8D2568282C00F5B073 /* PurchaseCategories.swift in Sources */,
+				C8DF9F98256844E700F5B073 /* Purchase.swift in Sources */,
 				C8DF9F9425682F9800F5B073 /* AddPurchaseCategory.swift in Sources */,
 				C8DF9F892568269500F5B073 /* PurchaseCategory.swift in Sources */,
 				C841D26E2559AEA200F8B67A /* MoneyTrackerApp.swift in Sources */,
