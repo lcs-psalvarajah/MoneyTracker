@@ -8,28 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+
     // Propert to track purchase categories
     @StateObject private var purchaseCategories = PurchaseCategories()
-    
+
     // Whether we are showing the add activity view or not
     @State private var addingCategory = false
-    
-    
+
+
     //Body property defines the user interface
     var body: some View {
-        
+
         NavigationView {
-            
-            List(purchaseCategories.defined) { category in
+
+            List(purchaseCategories.defined) { currentCategory in
                 
-                Text(category.title)
+                NavigationLink(currentCategory.title,
+                               destination: PurchaseCategoryDetailView(category: currentCategory))
+                
                 
             }
+
             .navigationTitle("Money Tracker")
             .toolbar {
                 ToolbarItem(placement: ToolbarItemPlacement.primaryAction) {
-                    
+
                     Button(action: {
                         print("Here's where we would add a category")
                         addingCategory = true
@@ -44,9 +47,8 @@ struct ContentView: View {
             }
         }
     }
-    
-}
 
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

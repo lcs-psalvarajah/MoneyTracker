@@ -13,7 +13,7 @@ struct AddPurchase: View {
     @State private var description = ""
     @State private var date = Date()
     
-    @ObservedObject var purchases: Purchases
+    @ObservedObject var category: PurchaseCategory
     
     // Whether we are showing the add activity view or not
     @Binding var addingPurchase: Bool
@@ -57,16 +57,19 @@ struct AddPurchase: View {
   
     func savePurchase() {
         // add the new category to the list of categories
-        purchases.defined.append(Purchase(amount: amount, description: description, date: date))
-        print(purchases.defined)
+        category.purchases.append(Purchase(amount: amount, description: description, date: date))
+        print(category.purchases)
         
         // dismiss the add category view
         addingPurchase = false
     }
 }
 
-//struct AddPurchase_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AddPurchase()
-//    }
-//}
+struct AddPurchase_Previews: PreviewProvider {
+    static var previews: some View {
+        AddPurchase(category: PurchaseCategory(title: "Food",
+                                               description: "Meals, snacks, and so on."),
+                    addingPurchase: .constant(true))
+        
+    }
+}

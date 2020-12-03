@@ -13,6 +13,7 @@ struct MoneyTrackerApp: App {
         WindowGroup {
             ContentView()
         }
+        
     }
 }
 

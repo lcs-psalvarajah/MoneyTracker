@@ -12,6 +12,7 @@
 		C841D2702559AEA200F8B67A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C841D26F2559AEA200F8B67A /* ContentView.swift */; };
 		C841D2722559AEA800F8B67A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C841D2712559AEA800F8B67A /* Assets.xcassets */; };
 		C841D2752559AEA800F8B67A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C841D2742559AEA800F8B67A /* Preview Assets.xcassets */; };
+		C89C8A232575528A00D55969 /* PurchaseCategoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89C8A222575528A00D55969 /* PurchaseCategoryDetailView.swift */; };
 		C8DF9F892568269500F5B073 /* PurchaseCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DF9F882568269500F5B073 /* PurchaseCategory.swift */; };
 		C8DF9F8D2568282C00F5B073 /* PurchaseCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DF9F8C2568282C00F5B073 /* PurchaseCategories.swift */; };
 		C8DF9F9425682F9800F5B073 /* AddPurchaseCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DF9F9325682F9800F5B073 /* AddPurchaseCategory.swift */; };
@@ -27,6 +28,7 @@
 		C841D2712559AEA800F8B67A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C841D2742559AEA800F8B67A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C841D2762559AEA800F8B67A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C89C8A222575528A00D55969 /* PurchaseCategoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCategoryDetailView.swift; sourceTree = "<group>"; };
 		C8DF9F882568269500F5B073 /* PurchaseCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCategory.swift; sourceTree = "<group>"; };
 		C8DF9F8C2568282C00F5B073 /* PurchaseCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseCategories.swift; sourceTree = "<group>"; };
 		C8DF9F9325682F9800F5B073 /* AddPurchaseCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPurchaseCategory.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			children = (
 				C841D26D2559AEA200F8B67A /* MoneyTrackerApp.swift */,
 				C841D26F2559AEA200F8B67A /* ContentView.swift */,
+				C89C8A222575528A00D55969 /* PurchaseCategoryDetailView.swift */,
 				C8DF9F9325682F9800F5B073 /* AddPurchaseCategory.swift */,
 				C8DF9F9A2568469A00F5B073 /* AddPurchase.swift */,
 				C841D2712559AEA800F8B67A /* Assets.xcassets */,
@@ -157,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C80936FE256AF859004DF8E5 /* Purchases.swift in Sources */,
+				C89C8A232575528A00D55969 /* PurchaseCategoryDetailView.swift in Sources */,
 				C8DF9F9B2568469A00F5B073 /* AddPurchase.swift in Sources */,
 				C841D2702559AEA200F8B67A /* ContentView.swift in Sources */,
 				C8DF9F8D2568282C00F5B073 /* PurchaseCategories.swift in Sources */,

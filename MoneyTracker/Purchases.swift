@@ -9,7 +9,7 @@ import Foundation
 
 class Purchases: ObservableObject {
     
-    @Published var defined: [Purchase] = []
+    @Published var defined: [Purchase] = [] //Empty list of purchase transactions
     
 }
 

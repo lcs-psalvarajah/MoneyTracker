@@ -31,7 +31,7 @@ struct AddPurchaseCategory: View {
                 }
                 
             }
-            .navigationTitle("Add Purchase Category")
+            .navigationTitle("Add Category")
             .toolbar {
                 
                 ToolbarItem(placement: ToolbarItemPlacement.primaryAction) {

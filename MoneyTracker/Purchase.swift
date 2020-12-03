@@ -7,10 +7,9 @@
 
 import Foundation
 
-struct Purchase {
-    // ask if amount should be a string or a double?
+struct Purchase: Identifiable {
+    var id = UUID()
     var amount: String
-    
     var description: String
     var date: Date
 }
