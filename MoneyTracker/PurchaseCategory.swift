@@ -12,7 +12,7 @@ class PurchaseCategory: ObservableObject, Identifiable {
     var id = UUID()
     var title: String
     var description: String
-   @Published var purchases: [Purchase]
+    @Published var purchases: [Purchase]
     
     init(title: String, description: String, purchases: [Purchase] = []) {
         

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
 
-    // Propert to track purchase categories
+    // Property to track purchase categories
     @StateObject private var purchaseCategories = PurchaseCategories()
 
     // Whether we are showing the add activity view or not

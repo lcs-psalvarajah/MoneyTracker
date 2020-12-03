@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct PurchaseCategoryDetailView: View {
+    
 
+    // Whether we are showing the add purchase view or not
+    @State private var addingPurchase = false
+    
     @ObservedObject var category: PurchaseCategory
+    
     
     var body: some View {
         
@@ -21,7 +26,9 @@ struct PurchaseCategoryDetailView: View {
                 List(category.purchases) { purchase in
                     
                     HStack() {
-                        Text(purchase.description)
+                        VStack {
+                            Text(purchase.description)
+                        }
                         Spacer()
                         Text(purchase.amount)
                     }
@@ -40,6 +47,20 @@ struct PurchaseCategoryDetailView: View {
             
         }
         .navigationTitle(category.title)
+        .toolbar {
+            ToolbarItem(placement: ToolbarItemPlacement.primaryAction) {
+
+                Button(action: {
+                    print("Here's where we would add a purchase")
+                    addingPurchase = true
+                }, label: {
+                    Image(systemName: "plus")
+                })
+            }
+        }
+        .sheet(isPresented: $addingPurchase) {
+            AddPurchase(category: category, addingPurchase: $addingPurchase)
+        }
         
     }
 }
