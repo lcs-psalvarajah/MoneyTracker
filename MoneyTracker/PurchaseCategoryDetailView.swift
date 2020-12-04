@@ -32,17 +32,16 @@ struct PurchaseCategoryDetailView: View {
                             Text("\(purchase.date)")
                         }
                         Spacer()
+                        
                         Text(String(format: "%.02f", purchase.amount))
 
                     }
                 }
                 
                 Spacer()
-                
-                Text("this is where the total purchases will appear, total is \(totalCategoryAmount)")
-                
-//                Text(String(purchase.map{$0.amount}.reduce(0, +)))
-               
+
+                Text("The total amount you have spent in this category is $\(totalCategoryAmount, specifier: "%.2f")")
+
                 Spacer()
                 
                 
