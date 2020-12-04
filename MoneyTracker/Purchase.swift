@@ -9,7 +9,7 @@ import Foundation
 
 struct Purchase: Identifiable {
     var id = UUID()
-    var amount: String
+    var amount: Double
     var description: String
     var date: Date
 }

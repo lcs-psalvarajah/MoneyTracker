@@ -15,6 +15,7 @@ struct PurchaseCategoryDetailView: View {
     
     @ObservedObject var category: PurchaseCategory
     
+    @State private var totalCategoryAmount = 0.0
     
     var body: some View {
         
@@ -28,13 +29,22 @@ struct PurchaseCategoryDetailView: View {
                     HStack() {
                         VStack {
                             Text(purchase.description)
+                            Text("\(purchase.date)")
                         }
                         Spacer()
-                        Text(purchase.amount)
+                        Text(String(format: "%.02f", purchase.amount))
+
                     }
-                    
-                    
                 }
+                
+                Spacer()
+                
+                Text("this is where the total purchases will appear, total is \(totalCategoryAmount)")
+                
+//                Text(String(purchase.map{$0.amount}.reduce(0, +)))
+               
+                Spacer()
+                
                 
             } else {
                 
@@ -61,6 +71,13 @@ struct PurchaseCategoryDetailView: View {
         .sheet(isPresented: $addingPurchase) {
             AddPurchase(category: category, addingPurchase: $addingPurchase)
         }
+        .onAppear() {
+            
+            for purchase in category.purchases {
+                totalCategoryAmount += purchase.amount
+            }
+            
+        }
         
     }
 }
@@ -82,13 +99,13 @@ struct PurchaseCategoryDetailView_Previews: PreviewProvider {
             PurchaseCategoryDetailView(category: PurchaseCategory(title: "Transportation",
                                                                   description: "For getting to and fro.",
                                                                   purchases: [
-                                                                    Purchase(amount: "137.53",
+                                                                    Purchase(amount: 137.53,
                                                                              description: "TTC Pass",
                                                                              date: Date()),
-                                                                    Purchase(amount: "24.17",
+                                                                    Purchase(amount: 24.17,
                                                                              description: "Taxi Fare to Peterborough",
                                                                              date: Date()),
-                                                                    Purchase(amount: "70.25",
+                                                                    Purchase(amount: 70.25,
                                                                              description: "Bus ticket to Toronto",
                                                                              date: Date()),
                                                                   ])

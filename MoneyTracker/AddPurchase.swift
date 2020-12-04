@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct AddPurchase: View {
-  
-    @State private var amount = ""
+
+    @State private var inputAmount = ""
     @State private var description = ""
     @State private var date = Date()
     
+    private var amount: Double {
+        
+        return Double(inputAmount) ?? 0.0
+        
+    }
     @ObservedObject var category: PurchaseCategory
     
     // Whether we are showing the add activity view or not
@@ -24,7 +29,7 @@ struct AddPurchase: View {
             Form {
                 
                 Section(header: Text("Amount Spent")) {
-                    TextField("e.g 20", text: $amount)
+                    TextField("e.g 20", text: $inputAmount)
                 }
                 
                 Section(header: Text("Description")) {
