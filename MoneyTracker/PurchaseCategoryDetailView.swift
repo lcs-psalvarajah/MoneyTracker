@@ -40,7 +40,7 @@ struct PurchaseCategoryDetailView: View {
                 
                 Spacer()
 
-                Text("The total amount you have spent in this category is $\(totalCategoryAmount, specifier: "%.2f")")
+                Text("The total amount you have spent in this category is $\(category.totalOfAllPurchases, specifier: "%.2f")")
 
                 Spacer()
                 
@@ -70,13 +70,7 @@ struct PurchaseCategoryDetailView: View {
         .sheet(isPresented: $addingPurchase) {
             AddPurchase(category: category, addingPurchase: $addingPurchase)
         }
-        .onAppear() {
-            
-            for purchase in category.purchases {
-                totalCategoryAmount += purchase.amount
-            }
-            
-        }
+        
         
     }
 }
@@ -97,6 +91,7 @@ struct PurchaseCategoryDetailView_Previews: PreviewProvider {
 
             PurchaseCategoryDetailView(category: PurchaseCategory(title: "Transportation",
                                                                   description: "For getting to and fro.",
+                                                                  totalOfAllPurchases: 231.95,
                                                                   purchases: [
                                                                     Purchase(amount: 137.53,
                                                                              description: "TTC Pass",
