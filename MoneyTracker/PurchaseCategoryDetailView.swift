@@ -83,18 +83,18 @@ struct PurchaseCategoryDetailView: View {
 
 
 struct PurchaseCategoryDetailView_Previews: PreviewProvider {
-    
+
     static var previews: some View {
-        
+
         NavigationView {
-            
+
             PurchaseCategoryDetailView(category: PurchaseCategory(title: "Food",
                                                                   description: "Meals, snacks, and so on."))
 
         }
-        
+
         NavigationView {
-            
+
             PurchaseCategoryDetailView(category: PurchaseCategory(title: "Transportation",
                                                                   description: "For getting to and fro.",
                                                                   purchases: [

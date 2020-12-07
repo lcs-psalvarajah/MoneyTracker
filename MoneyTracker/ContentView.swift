@@ -15,18 +15,17 @@ struct ContentView: View {
     // Whether we are showing the add activity view or not
     @State private var addingCategory = false
 
-
     //Body property defines the user interface
     var body: some View {
 
         NavigationView {
-
+            
             List(purchaseCategories.defined) { currentCategory in
                 
                 NavigationLink(currentCategory.title,
                                destination: PurchaseCategoryDetailView(category: currentCategory))
                 
-                
+
             }
 
             .navigationTitle("Money Tracker")
@@ -46,9 +45,12 @@ struct ContentView: View {
                                     addingCategory: $addingCategory)
             }
         }
+
+            
+        }
     }
 
-}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

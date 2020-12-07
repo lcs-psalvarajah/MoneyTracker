@@ -61,7 +61,8 @@ struct AddPurchase: View {
     }
   
     func savePurchase() {
-        // add the new category to the list of categories
+        // add a purchase to the category
+        category.totalOfAllPurchases += amount
         category.purchases.append(Purchase(amount: amount, description: description, date: date))
         print(category.purchases)
         

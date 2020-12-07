@@ -12,15 +12,15 @@ class PurchaseCategory: ObservableObject, Identifiable {
     var id = UUID()
     var title: String
     var description: String
-    var totalOfPurchases: Double  = 0.00
+    var totalOfAllPurchases: Double = 0.0
     @Published var purchases: [Purchase]
+
     
     init(title: String, description: String, purchases: [Purchase] = []) {
         
         self.title = title
         self.description = description
         self.purchases = purchases
-        
     }
     
 }
