@@ -16,7 +16,12 @@ struct ContentView: View {
     @State private var addingCategory = false
     
     // to track what the budget amount is for the graphs to based on
-    @State private var totalBudget = ""
+    @State private var totalBudgetAsString = ""
+    
+    // property t make the budget into a double
+    var totalBudget: Double {
+        return Double(totalBudgetAsString) ?? 0.0
+    }
     
     //Body property defines the user interface
     var body: some View {
@@ -24,7 +29,8 @@ struct ContentView: View {
             Form {
                 
                 Section(header: Text("Monthly Budget")) {
-                    TextField("Budget Amount", text: $totalBudget)
+                    TextField("Budget Amount", text: $totalBudgetAsString)
+                    Text("Monthly budget is $\(totalBudget, specifier: "%.2f")")
                 }
                 
                 Section(header: Text("Graph")) {
@@ -34,7 +40,8 @@ struct ContentView: View {
                             
                             BarView(valueToIllustrate: CGFloat(category.totalOfAllPurchases),
                                     cornerRadius: 10.0,
-                                    animationSpeed: 2.0, budget: 1000,
+                                    animationSpeed: 2.0,
+                                    budget: CGFloat(totalBudget),
                                     label: category.title)
 
                         }
