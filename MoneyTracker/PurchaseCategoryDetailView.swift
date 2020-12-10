@@ -16,7 +16,7 @@ struct PurchaseCategoryDetailView: View {
     @ObservedObject var category: PurchaseCategory
     
     @State private var totalCategoryAmount = 0.0
-  
+    
     var body: some View {
        
         VStack {
@@ -29,7 +29,7 @@ struct PurchaseCategoryDetailView: View {
                     HStack() {
                         VStack {
                             Text(purchase.description)
-                            Text("\(purchase.date)")
+                            Text(formattedDate(date: purchase.date))
                         }
                         Spacer()
                         
@@ -72,6 +72,14 @@ struct PurchaseCategoryDetailView: View {
         }
         
         
+    }
+    
+    func formattedDate(date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        formatter.dateStyle = .short
+        
+        return formatter.string(from: date)
     }
 }
 

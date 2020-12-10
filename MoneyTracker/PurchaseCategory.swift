@@ -10,9 +10,9 @@ import Foundation
 class PurchaseCategory: ObservableObject, Identifiable {
     
     var id = UUID()
-    var title: String
+    @Published var title: String
     var description: String
-    var totalOfAllPurchases: Double
+    @Published var totalOfAllPurchases: Double
     @Published var purchases: [Purchase]
 
     
