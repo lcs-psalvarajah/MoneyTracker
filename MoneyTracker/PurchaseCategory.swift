@@ -16,7 +16,7 @@ class PurchaseCategory: ObservableObject, Identifiable {
     @Published var purchases: [Purchase]
     
     
-    init(title: String, description: String, totalOfAllPurchases: Double = 50.0, purchases: [Purchase] = []) {
+    init(title: String, description: String, totalOfAllPurchases: Double = 0.0, purchases: [Purchase] = []) {
         
         self.totalOfAllPurchases = totalOfAllPurchases
         self.title = title

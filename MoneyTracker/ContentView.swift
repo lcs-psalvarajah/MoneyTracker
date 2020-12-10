@@ -33,21 +33,18 @@ struct ContentView: View {
                     Text("Monthly budget is $\(totalBudget, specifier: "%.2f")")
                 }
                 
-                Section(header: Text("Graph")) {
-                    VStack(alignment: .trailing, spacing: 10) {
+                if purchaseCategories.defined.count > 0 {
+                    
+                    ForEach(purchaseCategories.defined) { category in
                         
-                        ForEach(purchaseCategories.defined) { category in
-                            
-                            BarView(valueToIllustrate: CGFloat(category.totalOfAllPurchases),
-                                    cornerRadius: 10.0,
-                                    animationSpeed: 2.0,
-                                    budget: CGFloat(totalBudget),
-                                    label: category.title)
-
-                        }
+                        BarView(valueToIllustrate: CGFloat(category.totalOfAllPurchases),
+                                cornerRadius: 10.0,
+                                animationSpeed: 2.0,
+                                budget: CGFloat(totalBudget),
+                                label: category.title)
                         
                     }
-                    .padding(.top, 24)
+                    
                 }
                 
                 Section {
