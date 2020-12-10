@@ -28,19 +28,19 @@ struct ContentView: View {
                 }
                 
                 Section(header: Text("Graph")) {
-                                VStack(alignment: .trailing, spacing: 10) {
-                    
-                                    ForEach(purchaseCategories.defined) { category in
-                    
-                                        BarView(valueToIllustrate: CGFloat(category.totalOfAllPurchases),
-                                                cornerRadius: 10.0,
-                                                animationSpeed: 2.0,
-                                                label: category.title)
-                    
-                                    }
-                    
-                                }
-                                .padding(.top, 24)
+                    VStack(alignment: .trailing, spacing: 10) {
+                        
+                        ForEach(purchaseCategories.defined) { category in
+                            
+                            BarView(valueToIllustrate: CGFloat(category.totalOfAllPurchases),
+                                    cornerRadius: 10.0,
+                                    animationSpeed: 2.0,
+                                    label: category.title)
+                            
+                        }
+                        
+                    }
+                    .padding(.top, 24)
                 }
                 
                 Section {
@@ -72,17 +72,13 @@ struct ContentView: View {
                                     addingCategory: $addingCategory)
             }
             
-
+            
             
             
         }
         
     }
 }
-
-
-
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

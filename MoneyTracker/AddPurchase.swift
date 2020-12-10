@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AddPurchase: View {
-        
+    
     @State private var inputAmount = ""
     @State private var description = ""
     @State private var date = Date()
@@ -59,7 +59,7 @@ struct AddPurchase: View {
         
         
     }
-  
+    
     func savePurchase() {
         // add a purchase to the category
         category.totalOfAllPurchases += amount

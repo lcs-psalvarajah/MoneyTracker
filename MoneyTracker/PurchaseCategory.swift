@@ -14,7 +14,7 @@ class PurchaseCategory: ObservableObject, Identifiable {
     var description: String
     @Published var totalOfAllPurchases: Double
     @Published var purchases: [Purchase]
-
+    
     
     init(title: String, description: String, totalOfAllPurchases: Double = 0.0, purchases: [Purchase] = []) {
         
@@ -35,7 +35,7 @@ var testData = [
     PurchaseCategory(title: "Transporation", description: "For getting to and for", totalOfAllPurchases: 25.00, purchases: [
         Purchase(amount: 25.00, description: "Bus tickets", date: Date()),
     ]),
-
+    
     
 ]
 

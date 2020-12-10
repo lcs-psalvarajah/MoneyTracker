@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PurchaseCategoryDetailView: View {
     
-
+    
     // Whether we are showing the add purchase view or not
     @State private var addingPurchase = false
     
@@ -18,7 +18,7 @@ struct PurchaseCategoryDetailView: View {
     @State private var totalCategoryAmount = 0.0
     
     var body: some View {
-       
+        
         VStack {
             
             // List purchases
@@ -34,14 +34,14 @@ struct PurchaseCategoryDetailView: View {
                         Spacer()
                         
                         Text(String(format: "%.02f", purchase.amount))
-
+                        
                     }
                 }
                 
                 Spacer()
-
-                Text("The total amount you have spent in this category is $\(category.totalOfAllPurchases, specifier: "%.2f")")
-
+                
+                Text("The total amount you have spent for \(category.title) is $\(category.totalOfAllPurchases, specifier: "%.2f")")
+                
                 Spacer()
                 
                 
@@ -58,7 +58,7 @@ struct PurchaseCategoryDetailView: View {
         .navigationTitle(category.title)
         .toolbar {
             ToolbarItem(placement: ToolbarItemPlacement.primaryAction) {
-
+                
                 Button(action: {
                     print("Here's where we would add a purchase")
                     addingPurchase = true
@@ -85,18 +85,18 @@ struct PurchaseCategoryDetailView: View {
 
 
 struct PurchaseCategoryDetailView_Previews: PreviewProvider {
-
+    
     static var previews: some View {
-
+        
         NavigationView {
-
+            
             PurchaseCategoryDetailView(category: PurchaseCategory(title: "Food",
                                                                   description: "Meals, snacks, and so on."))
-
+            
         }
-
+        
         NavigationView {
-
+            
             PurchaseCategoryDetailView(category: PurchaseCategory(title: "Transportation",
                                                                   description: "For getting to and fro.",
                                                                   totalOfAllPurchases: 231.95,
@@ -112,7 +112,7 @@ struct PurchaseCategoryDetailView_Previews: PreviewProvider {
                                                                              date: Date()),
                                                                   ])
             )
-
+            
         }
     }
 }
