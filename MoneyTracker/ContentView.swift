@@ -34,9 +34,9 @@ struct ContentView: View {
                             
                             BarView(valueToIllustrate: CGFloat(category.totalOfAllPurchases),
                                     cornerRadius: 10.0,
-                                    animationSpeed: 2.0,
+                                    animationSpeed: 2.0, budget: 1000,
                                     label: category.title)
-                            
+
                         }
                         
                     }

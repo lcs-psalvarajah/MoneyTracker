@@ -24,8 +24,17 @@ struct BarView: View {
     // Control speed of animation
     var animationSpeed = 2.0
     
+    // What's the overall budget?
+    var budget: CGFloat
+    
     // The label for the value
     var label = ""
+    
+    // How wide to make the bar
+    var barWidth: CGFloat {
+        return 200.0 * (valueToIllustrate / budget)
+    }
+    
     
     var body: some View {
         
@@ -50,7 +59,7 @@ struct BarView: View {
             }
             .padding(.bottom, 8)
             .onAppear() {
-                currentValue = valueToIllustrate
+                currentValue = barWidth
             }
 
         }
@@ -62,7 +71,7 @@ struct BarView: View {
 struct BarView_Previews: PreviewProvider {
     static var previews: some View {
     
-        BarView(valueToIllustrate: 100, cornerRadius: 10, animationSpeed: 2.0, label: "Recreation")
+        BarView(valueToIllustrate: 800, cornerRadius: 10, animationSpeed: 2.0, budget: 1000, label: "Recreation")
         
     }
 }
