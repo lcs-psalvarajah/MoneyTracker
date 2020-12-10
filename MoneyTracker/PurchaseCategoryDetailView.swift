@@ -77,7 +77,7 @@ struct PurchaseCategoryDetailView: View {
     func formattedDate(date: Date) -> String {
         let formatter = DateFormatter()
         formatter.timeStyle = .short
-        formatter.dateStyle = .short
+        formatter.dateStyle = .medium
         
         return formatter.string(from: date)
     }
