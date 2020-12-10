@@ -44,7 +44,7 @@ struct BarView: View {
                 // The length of the bar, based upon the value to illustrate
                 RoundedRectangle(cornerRadius: cornerRadius)
                     .frame(width: currentValue, height: 30)
-                    .foregroundColor(.green)
+                    .foregroundColor(.yellow)
                     .animation(.easeIn(duration: animationSpeed))
                 
             }

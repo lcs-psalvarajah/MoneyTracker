@@ -26,5 +26,16 @@ class PurchaseCategory: ObservableObject, Identifiable {
     
 }
 
+var testData = [
+    
+    PurchaseCategory(title: "Food", description: "Things I eat", totalOfAllPurchases: 57.00, purchases: [
+        Purchase(amount: 7.00, description: "Gum", date: Date()),
+        Purchase(amount: 50.00, description: "Milk", date: Date()),
+    ]),
+    PurchaseCategory(title: "Transporation", description: "For getting to and for", totalOfAllPurchases: 25.00, purchases: [
+        Purchase(amount: 25.00, description: "Bus tickets", date: Date()),
+    ]),
 
+    
+]
 

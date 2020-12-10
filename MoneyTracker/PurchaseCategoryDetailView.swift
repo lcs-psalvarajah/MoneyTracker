@@ -16,9 +16,9 @@ struct PurchaseCategoryDetailView: View {
     @ObservedObject var category: PurchaseCategory
     
     @State private var totalCategoryAmount = 0.0
-    
+  
     var body: some View {
-        
+       
         VStack {
             
             // List purchases

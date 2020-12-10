@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C80936FE256AF859004DF8E5 /* Purchases.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80936FD256AF859004DF8E5 /* Purchases.swift */; };
+		C82BD2D7257E9CC800D453E1 /* TotalAmountGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82BD2D6257E9CC800D453E1 /* TotalAmountGraph.swift */; };
 		C841D26E2559AEA200F8B67A /* MoneyTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C841D26D2559AEA200F8B67A /* MoneyTrackerApp.swift */; };
 		C841D2702559AEA200F8B67A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C841D26F2559AEA200F8B67A /* ContentView.swift */; };
 		C841D2722559AEA800F8B67A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C841D2712559AEA800F8B67A /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		C80936FD256AF859004DF8E5 /* Purchases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purchases.swift; sourceTree = "<group>"; };
+		C82BD2D6257E9CC800D453E1 /* TotalAmountGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalAmountGraph.swift; sourceTree = "<group>"; };
 		C841D26A2559AEA200F8B67A /* MoneyTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C841D26D2559AEA200F8B67A /* MoneyTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyTrackerApp.swift; sourceTree = "<group>"; };
 		C841D26F2559AEA200F8B67A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				C8DF9F97256844E700F5B073 /* Purchase.swift */,
 				C80936FD256AF859004DF8E5 /* Purchases.swift */,
 				C85681B9257BD7C800465ECB /* BarView.swift */,
+				C82BD2D6257E9CC800D453E1 /* TotalAmountGraph.swift */,
 			);
 			path = MoneyTracker;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 				C8DF9F9425682F9800F5B073 /* AddPurchaseCategory.swift in Sources */,
 				C8DF9F892568269500F5B073 /* PurchaseCategory.swift in Sources */,
 				C841D26E2559AEA200F8B67A /* MoneyTrackerApp.swift in Sources */,
+				C82BD2D7257E9CC800D453E1 /* TotalAmountGraph.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

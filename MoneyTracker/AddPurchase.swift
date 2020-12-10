@@ -8,10 +8,15 @@
 import SwiftUI
 
 struct AddPurchase: View {
-
+        
     @State private var inputAmount = ""
     @State private var description = ""
     @State private var date = Date()
+    
+//    let formatter = DateFormatter()
+//    formatter.timeStyle = .short
+//    formatter.dateStyle = .short
+//    formatter.string(from: date)
     
     private var amount: Double {
         
