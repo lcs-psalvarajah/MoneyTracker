@@ -29,7 +29,7 @@ struct ContentView: View {
             Form {
                 
                 Section(header: Text("Monthly Budget")) {
-                    TextField("Budget Amount", text: $totalBudgetAsString)
+                    TextField("Enter budget amount", text: $totalBudgetAsString)
                     Text("Monthly budget is $\(totalBudget, specifier: "%.2f")")
                 }
                 
@@ -37,23 +37,26 @@ struct ContentView: View {
                     
                     ForEach(purchaseCategories.defined) { category in
                         
-                        BarView(category: category,
+                        BarView (category: category,
                                 budget: CGFloat(totalBudget))
-
+                        
                         
                     }
                     
                 }
                 
                 Section {
-                    
-                    List(purchaseCategories.defined) { currentCategory in
-                        
-                        NavigationLink(currentCategory.title,
-                                       destination: PurchaseCategoryDetailView(category: currentCategory))
-                        
-                        
-                        
+                    List{
+                        ForEach(purchaseCategories.defined) { currentCategory in
+                            HStack {
+                                VStack (alignment:.leading) {
+                            NavigationLink(currentCategory.title,
+                                           destination: PurchaseCategoryDetailView(category: currentCategory))
+                                    Text(currentCategory.description)
+                                        .font(.caption)
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -83,7 +86,6 @@ struct ContentView: View {
         
     }
 }
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()

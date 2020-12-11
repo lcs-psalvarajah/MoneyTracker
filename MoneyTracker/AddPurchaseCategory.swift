@@ -22,7 +22,7 @@ struct AddPurchaseCategory: View {
                 
                 Section (header: Text("Title")) {
                     
-                    TextField("e.g.: transportation", text: $title)
+                    TextField("e.g.: Transportation", text: $title)
                 }
                 
                 Section (header: Text("Description")) {

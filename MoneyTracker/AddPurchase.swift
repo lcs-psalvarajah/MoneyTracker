@@ -41,7 +41,7 @@ struct AddPurchase: View {
                         .labelsHidden()
                 }
             }
-            .navigationTitle("Add Purchase Information")
+            .navigationTitle("Add Purchase")
             .toolbar {
                 
                 ToolbarItem(placement: ToolbarItemPlacement.primaryAction) {

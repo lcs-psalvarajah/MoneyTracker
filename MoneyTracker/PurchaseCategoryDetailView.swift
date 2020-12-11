@@ -29,11 +29,14 @@ struct PurchaseCategoryDetailView: View {
                     HStack() {
                         VStack {
                             Text(purchase.description)
+                                .multilineTextAlignment(.center)
                             Text(formattedDate(date: purchase.date))
+                                .font(.caption)
                         }
                         Spacer()
                         
                         Text(String(format: "%.02f", purchase.amount))
+                            .font(.headline)
                         
                     }
                 }
@@ -41,13 +44,15 @@ struct PurchaseCategoryDetailView: View {
                 Spacer()
                 
                 Text("The total amount you have spent for \(category.title) is $\(category.totalOfAllPurchases, specifier: "%.2f")")
+                    .multilineTextAlignment(.center)
                 
                 Spacer()
                 
                 
             } else {
                 
-                Text("No purchases have been made yet in this category.")
+                Text("No purchases have been made in this category")
+                    .multilineTextAlignment(.center)
                     .padding()
                 
             }
