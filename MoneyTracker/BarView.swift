@@ -11,28 +11,27 @@
 import SwiftUI
 
 struct BarView: View {
+    
+    // Category to illustrate
+    var category: PurchaseCategory
+
+    // What's the overall budget?
+    var budget: CGFloat
 
     // Starting value
     @State private var currentValue: CGFloat = 0.0
     
-    // The value to be illustrated with a bar
-    var valueToIllustrate: CGFloat
-    
     // How rounded the corner of the bar should be (higher is more rounded)
-    var cornerRadius: CGFloat
+    var cornerRadius: CGFloat = 10.0
     
     // Control speed of animation
     var animationSpeed = 2.0
     
-    // What's the overall budget?
-    var budget: CGFloat
-    
-    // The label for the value
-    var label = ""
     
     // How wide to make the bar
     var barWidth: CGFloat {
-        return 200.0 * (valueToIllustrate / budget)
+        return 200.0 * (CGFloat(category.totalOfAllPurchases) / budget)
+        
     }
     
     
@@ -40,7 +39,7 @@ struct BarView: View {
         
         HStack(alignment: .center) {
 
-            Text(label)
+            Text(category.title)
                 .padding(.bottom, 10)
 
             ZStack (alignment: .leading) {
@@ -71,7 +70,14 @@ struct BarView: View {
 struct BarView_Previews: PreviewProvider {
     static var previews: some View {
     
-        BarView(valueToIllustrate: 800, cornerRadius: 10, animationSpeed: 2.0, budget: 1000, label: "Recreation")
-        
+        BarView(category: PurchaseCategory(title: "Food",
+                                                  description: "Things that I need to consume to do everything else in my life...",
+                                                  totalOfAllPurchases: 57.28,
+                                                  purchases: [
+                                                   Purchase(amount: 25.00, description: "Milk", date: Date()),
+                                                   Purchase(amount: 32.00, description: "Cereal", date: Date()),
+                                                   Purchase(amount: 0.27, description: "Sugar", date: Date()),
+                                                  ]),
+                       budget: 200)
     }
 }

@@ -37,11 +37,9 @@ struct ContentView: View {
                     
                     ForEach(purchaseCategories.defined) { category in
                         
-                        BarView(valueToIllustrate: CGFloat(category.totalOfAllPurchases),
-                                cornerRadius: 10.0,
-                                animationSpeed: 2.0,
-                                budget: CGFloat(totalBudget),
-                                label: category.title)
+                        BarView(category: category,
+                                budget: CGFloat(totalBudget))
+
                         
                     }
                     
